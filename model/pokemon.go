@@ -51,7 +51,7 @@ type PokeListTypeAPI struct {
 		Pokemon struct {
 			Name string `json:"name"`
 			Url  string `json:"url"`
-		}
+		} `json:"pokemon"`
 	} `json:"pokemon"`
 	Moves []struct {
 		Name string `json:"name"`

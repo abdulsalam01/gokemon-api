@@ -14,3 +14,7 @@ func DatabaseManager() *gorm.DB {
 func BaseUrl() string {
 	return os.Getenv("BASE_POKEMON_API")
 }
+
+func BaseLimit() string {
+	return os.Getenv("LIMIT_POKEMON_API")
+}

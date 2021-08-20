@@ -12,7 +12,7 @@ import (
 )
 
 func GetPokemons(c echo.Context) error {
-	pokeReq := fmt.Sprintf("%s/pokemon?limit=10", BaseUrl())
+	pokeReq := fmt.Sprintf("%s/pokemon?limit=%s", BaseUrl(), BaseLimit())
 	res, err := http.Get(pokeReq)
 
 	if err != nil {
