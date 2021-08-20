@@ -15,5 +15,5 @@ Configuration used gonfig. All configs are declared in `.env`
 
 
 ## Run 
-`go run server.go`
-`./bin/air` (Using air.toml)
+- `go run server.go`
+- `./bin/air` (Using air.toml)
