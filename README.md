@@ -2,8 +2,8 @@
 
 
 ## Configurations
-Database Name: gokemon-api.db
-Configuration used gonfig. All configs are declared in `.env`
+- Database Name: gokemon-api.db
+- Configuration used gonfig. All configs are declared in `.env`
 
 ## Architecture
 | Folder | Details |
