@@ -1,9 +1,9 @@
-# Sample Echo with GORM
-
+# Gokemon Echo with GORM
 
 
 ## Configurations
-Configuration used gonfig. All configs are declared in `config/config.json`
+Database Name: gokemon-api.db
+Configuration used gonfig. All configs are declared in `.env`
 
 ## Architecture
 | Folder | Details |
@@ -16,5 +16,4 @@ Configuration used gonfig. All configs are declared in `config/config.json`
 
 ## Run 
 `go run server.go`
-
-
+`./bin/air` (Using air.toml)
