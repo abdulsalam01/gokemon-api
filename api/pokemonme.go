@@ -19,10 +19,11 @@ func GetPokemonLocal(c echo.Context) error {
 	// init-array of pokextra
 	pokeExtra := make([]model.PokemonExtra, len(pokemon))
 	for i, v := range pokemon {
+		fibo := FibonacyConverter(v.Count)
 		pokeExtra[i] = model.PokemonExtra{
 			Pokemon:   v,
-			FiboCount: FibonacyConverter(v.Count),
-			NameFibo:  fmt.Sprintf("%s - %d", v.Name, pokeExtra[i].FiboCount),
+			FiboCount: fibo,
+			NameFibo:  fmt.Sprintf("%s - %d", v.Name, fibo),
 		}
 	}
 
@@ -37,11 +38,12 @@ func GetPokemonLocalById(c echo.Context) error {
 	db.First(&pokemon, id).Take(&pokemon)
 
 	// init-array of pokextra
+	fibo := FibonacyConverter(pokemon.Count),
 	pokeExtra := model.PokemonExtra{}
 	pokeExtra = model.PokemonExtra{
 		Pokemon:   pokemon,
-		FiboCount: FibonacyConverter(pokemon.Count),
-		NameFibo:  fmt.Sprintf("%s - %d", pokemon.Name, pokeExtra.FiboCount),
+		FiboCount: fibo,
+		NameFibo:  fmt.Sprintf("%s - %d", pokemon.Name, fibo),
 	}
 
 	return c.JSON(http.StatusOK, pokeExtra)
