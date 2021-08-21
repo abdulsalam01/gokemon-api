@@ -38,7 +38,7 @@ func GetPokemonLocalById(c echo.Context) error {
 	db.First(&pokemon, id).Take(&pokemon)
 
 	// init-array of pokextra
-	fibo := FibonacyConverter(pokemon.Count),
+	fibo := FibonacyConverter(pokemon.Count)
 	pokeExtra := model.PokemonExtra{}
 	pokeExtra = model.PokemonExtra{
 		Pokemon:   pokemon,
